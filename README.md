@@ -24,9 +24,9 @@ Command to create an incremental archive called logs_backup.tar.gz with only cha
 
 Critical Analysis Question
 
-Why wouldn't you use the options -x and -c at the same time with tar?
- &emsp;&emsp;**-x is used to extract and write files for the archive <br>
- &emsp;&emsp;-c makes the name of the directory where the tar files will be placed. If you were to use these at the same time with tar this would create a conflict with the command line and cancel each other out.**<br>
+Why wouldn't you use the options -x and -c at the same time with tar?  
+ &emsp;&emsp;**-x is used to extract and write files for the archive  
+ &emsp;&emsp;-c makes the name of the directory where the tar files will be placed. If you were to use these at the same time with tar this would create a conflict with the command line and cancel each other out.**  
 
 
 <h3>Step 2: Create, Manage, and Automate Cron Jobs</h3>
