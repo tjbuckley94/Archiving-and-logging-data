@@ -15,7 +15,7 @@ Command to ensure Java/ is not in the new Javaless_Docs.tar archive:
  &emsp;&emsp;**$tar tvvf Javaless_Doc.tar | grep Java**
 
 
-Optional
+<h3>Optional</h3>
  
 Command to create an incremental archive called logs_backup.tar.gz with only changed files to snapshot.file for the /var/log directory:
 
