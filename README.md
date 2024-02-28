@@ -25,8 +25,8 @@ Command to create an incremental archive called logs_backup.tar.gz with only cha
 Critical Analysis Question
 
 Why wouldn't you use the options -x and -c at the same time with tar?
- &emsp;&emsp;**-x is used to extract and write files for the archive </br>
- &emsp;&emsp;-c makes the name of the directory where the tar files will be placed. If you were to use these at the same time with tar this would create a conflict with the command line and cancel each other out.** </br>
+ &emsp;&emsp;<br>**-x is used to extract and write files for the archive </br>
+ &emsp;&emsp;<br>-c makes the name of the directory where the tar files will be placed. If you were to use these at the same time with tar this would create a conflict with the command line and cancel each other out.** </br>
 
 
 <h3>Step 2: Create, Manage, and Automate Cron Jobs</h3>
@@ -44,11 +44,11 @@ Brace expansion command to create the four subdirectories:
 
 Paste your system.sh script edits:
 
- &emsp;&emsp;**#!/bin/bash
- &emsp;&emsp;Free -h > ~/backups/freemem/free_mem.txt
- &emsp;&emsp;Du -h > ~/backups/diskuse/disk_usage.txt
- &emsp;&emsp;Lsof > ~/backups/openlist/open_list.txt
- &emsp;&emsp;Df -h > ~/backups/freedisk/free_disk.txt**
+ &emsp;&emsp;<br>**#!/bin/bash</br>
+ &emsp;&emsp;<br>Free -h > ~/backups/freemem/free_mem.txt</br>
+ &emsp;&emsp;<br>Du -h > ~/backups/diskuse/disk_usage.txt</br>
+ &emsp;&emsp;<br>Lsof > ~/backups/openlist/open_list.txt</br>
+ &emsp;&emsp;<br>Df -h > ~/backups/freedisk/free_disk.txt**</br>
 
 
 Command to make the system.sh script executable:
@@ -61,11 +61,11 @@ Command to make the system.sh script executable:
 
 Commands to test the script and confirm its execution:
 
- &emsp;&emsp;**$sudo ./system.sh
- &emsp;&emsp;$cat ~/backups/freemem/free_mem.txt
- &emsp;&emsp;$cat ~/backups/diskuse/disk_usage.txt
- &emsp;&emsp;$cat ~/backups/openlist/open_list.txt
- &emsp;&emsp;$cat ~/backups/freedisk/free_disk.txt**
+ &emsp;&emsp;<br>**$sudo ./system.sh</br>
+ &emsp;&emsp;<br>$cat ~/backups/freemem/free_mem.txt</br>
+ &emsp;&emsp;<br>$cat ~/backups/diskuse/disk_usage.txt</br>
+ &emsp;&emsp;<br>$cat ~/backups/openlist/open_list.txt</br>
+ &emsp;&emsp;<br>$cat ~/backups/freedisk/free_disk.txt**</br>
 
 
 
@@ -84,13 +84,13 @@ Configure a log rotation scheme that backs up authentication messages to the /va
 
 Add your config file edits:
 
- &emsp;&emsp;**/var/log/auth.log {
- &emsp;&emsp;Weekly
- &emsp;&emsp;Rotate 7
- &emsp;&emsp;Notifempty
- &emsp;&emsp;Delaycompress
- &emsp;&emsp;Missingok
- &emsp;&emsp;}**
+ &emsp;&emsp;<br>**/var/log/auth.log {</br>
+ &emsp;&emsp;<br>Weekly</br>
+ &emsp;&emsp;<br>Rotate 7</br>
+ &emsp;&emsp;<br>Notifempty</br>
+ &emsp;&emsp;<br>Delaycompress</br>
+ &emsp;&emsp;<br>Missingok</br>
+ &emsp;&emsp;}<br>**</br>
 
 
 
@@ -108,8 +108,8 @@ Command to set number of retained logs and maximum log file size:
 
 Add the edits made to the configuration file:
 
- &emsp;&emsp;**max_log_file=35 
- &emsp;&emsp;num_logs=7**
+ &emsp;&emsp;<br>**max_log_file=35 </br>
+ &emsp;&emsp;<br>num_logs=7**</br>
 
 
 Command using auditd to set rules for /etc/shadow, /etc/passwd, and /var/log/auth.log:
@@ -119,9 +119,9 @@ Command using auditd to set rules for /etc/shadow, /etc/passwd, and /var/log/aut
  
 Add the edits made to the rules file below:
 
- &emsp;&emsp;**-w /etc/shadow -p rwa -k hashpass_audit
- &emsp;&emsp;-e /etc/passwd -p rwa -k userpass_audit
- &emsp;&emsp;-w /var/log/auth.log -p rwa -k authlog_audit**
+ &emsp;&emsp;<br>**-w /etc/shadow -p rwa -k hashpass_audit</br>
+ &emsp;&emsp;<br>-e /etc/passwd -p rwa -k userpass_audit</br>
+ &emsp;&emsp;<br>-w /var/log/auth.log -p rwa -k authlog_audit**</br>
 
 
 Command to restart auditd:
